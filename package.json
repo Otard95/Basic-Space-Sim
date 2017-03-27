@@ -1,0 +1,37 @@
+{
+  "name": "basic-space-sim",
+  "version": "0.0.1",
+  "description": "A basic newtonian physics, multiplayer, space sim",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Otard95/Basic-Space-Sim.git"
+  },
+  "keywords": [
+    "nodejs",
+    "socket.io",
+    "multiplayer",
+    "space-sim",
+    "express"
+  ],
+  "author": "Stian Myklebostad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Otard95/Basic-Space-Sim/issues"
+  },
+  "homepage": "https://github.com/Otard95/Basic-Space-Sim#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-pug2": "0.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  }
+}
