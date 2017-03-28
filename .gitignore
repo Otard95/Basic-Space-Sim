@@ -1,5 +1,9 @@
-node_modules
+node_modules/*
 *.bat
 *.bak
 *.txt
 *.local.*
+
+# exceptions
+!node_modules/express
+!node_modules/socket.io*
