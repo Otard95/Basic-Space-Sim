@@ -14,4 +14,4 @@ The goal is to have proper newtonian physics and orbital mechanics.
  - [gulp-pug2](https://www.npmjs.com/package/gulp-pug2 "npmjs - gulp-pusg2")
  - [gulp-sass](https://www.npmjs.com/package/gulp-sass "npmjs - gulp-sass")
  - [gulp-rename](https://www.npmjs.com/package/gulp-rename "npmjs - gulp-rename")
- - [browser-sync](https://browsersync.io/ "Browsersync Homepage")
+ - [Browsersync](https://browsersync.io/ "Browsersync Homepage")
