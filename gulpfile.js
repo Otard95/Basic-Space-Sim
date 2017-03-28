@@ -7,7 +7,7 @@ var   browserSync = require('browser-sync').create();
 var   rename      = require('gulp-rename');
 
 gulp.task('browser-sync', function() {
-    browserSync.init({ serve: 'localhost', basedir:'./public'});
+    browserSync.init({ proxy: 'localhost:3000' });
 });
 
 gulp.task('reload', function() {
@@ -17,15 +17,13 @@ gulp.task('reload', function() {
 gulp.task('pug', function() {
     return gulp.src('./_pug/**/*.pug')
         .pipe(pug())
-        .pipe(rename(function (path) {
-          path.dirname.replace('_pug','public/')
-        }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./public'));
 });
 
 gulp.task('sass', function () {
   return gulp.src(['./_sass/*.sass', './_sass/*.scss'])
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest('./public/assets/css'))
     .pipe(browserSync.reload({ stream:true }));
 });
