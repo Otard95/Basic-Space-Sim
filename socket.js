@@ -51,7 +51,7 @@ io.on('connection', function(socket) {
         game.players[socket.id].controls.bak = data.value; // Backwards
         break;
       default:
-        console.log('Invalid key');
+        //console.log('Invalid key');
     }
   })
 
@@ -94,6 +94,12 @@ var gameClock = setInterval(function() {
     delete playerInfo[p].update;
     delete playerInfo[p].vector.v;
     delete playerInfo[p].vector.update;
+    delete playerInfo[p].turn;
+    delete playerInfo[p].mass;
+    delete playerInfo[p].spd;
+    delete playerInfo[p].force;
+    delete playerInfo[p].deceleration;
+    delete playerInfo[p].translation;
   }
   io.emit('update', {
     objects: null,
