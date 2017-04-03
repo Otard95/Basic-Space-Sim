@@ -29,16 +29,9 @@ var game = {
   players: null,
   me: null,
   elements: {},
-  init: function(data) { // Get
-    this.objects = data.objects;
-    this.players = data.players;
+  init: function(data) {
     this.scene.append('<player class="ship" id="' + data.id + '"></player>');
     this.me = { dom: $('#' + data.id), id: data.id };
-    this.me.dom.css({
-      'left': this.players[data.id].pos.x + 'px',
-      'top': this.players[data.id].pos.y + 'px',
-      'transform': 'rotate(' + this.players[data.id].vector.angle + 'deg)'
-    });
 
     $(window).keydown(function(event){game.keyEvent(event)});
     $(window).keyup(function(event){game.keyEvent(event)});
@@ -59,9 +52,7 @@ var game = {
     }
   },
   update: function(data) {
-    for (var p in data.players) {
-      this.players[p] = data.players[p];
-    }
+    this.players = data.players;
     this.paint();
   },
   paint: function() { // Updates the dom

@@ -26,12 +26,9 @@ io.on('connection', function(socket) {
   console.log('Socket connected | New soccet: ' + socket.id);
   // Create player and update
   game.newPlayer(socket.id);
-  game.update();
 
   // Initilize Client
   socket.emit('init', {
-    objects: null,
-    players: game.players,
     id: socket.id
   });
 
@@ -100,6 +97,7 @@ var gameClock = setInterval(function() {
     delete playerInfo[p].force;
     delete playerInfo[p].deceleration;
     delete playerInfo[p].translation;
+    delete playerInfo[p].vector.vel;
   }
   io.emit('update', {
     objects: null,
