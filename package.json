@@ -1,6 +1,6 @@
 {
   "name": "basic-space-sim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A basic newtonian physics, multiplayer, space sim",
   "main": "bin/www",
   "scripts": {
